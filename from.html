@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form HTML</title>
+</head>
+<body>
+    <h1>Latihan Form</h1>
+    <form action="index.php" method="GET">
+        <fieldset>
+            <legend>Data Diri</legend>
+            <p>
+             <label for="nama">Nama</label>
+             <input type="text" id="nama">
+             </br></br>
+             <label for="umur">Umur</label>
+             <input type="number" id="umur" max="70">
+             
+             <p><b>Apa nama faforitmu</b></p>
+             <select>
+                <option value="">Merah</option>
+                <option value="">Kuning</option>
+                <option selected value="">Hijau</option>
+             </select>
+            </p>
+
+            <input type="radio" id="html" name="fax_langueage" value="html">
+            <label for="html">HTML</label>
+            <input type="radio" id="css" name="fax_langueage" value="html">
+            <label for="css">CSS</label>
+            <input type="radio" id="javascript" name="fax_langueage" value="html">
+            <label for="javascript">javascript</label>
+
+            <br><br>
+            
+            <textarea name="text" ></textarea>
+            
+            <br><br>
+
+            <button type="submit">submit</button>
+        </fieldset>
+    </form>
+</body>
+</html>
