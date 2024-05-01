@@ -4,20 +4,105 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Layout HTML</title>
+
+    <style>
+        .content {
+            flex-direction: row; display: flex;
+        }
+        .content > div {
+            display: flex; flex: 1; align-items: center; justify-content: center;
+        }
+        th {
+            background-color: #e3e3e3;
+        }
+        .table_persen, th, td {
+            padding: 20px 10px;
+            text-align: center;
+            border-collapse: collapse;
+            border: 3px #c2c2c2 solid;
+        }
+        footer {
+            display: flex;
+            justify-content: end;
+        }
+    </style>
 </head>
 <body>
-    <article>
-        <header>
-            <h1>Judul Artikel</h1>
-            <p>selamat datang</p>
-        </header>
-        <main>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi mollitia quos quam sed aspernatur aperiam explicabo vero optio laboriosam provident nisi laborum dolore corrupti, debitis libero possimus nobis sapiente inventore!</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, molestias.</p>
-        </main>
-        <footer>
-            <p>Finish</p>
-        </footer>
-    </article>
+    <header>
+        <h1>Form Belajar</h1>
+        <p>Ini adalah website latihan pertama</p>
+    </header>
+    <main class="content" style="">
+        <div>
+            <form action="">
+                <p>
+                    <label for="nama">Nama :</label>
+                    <input type="text" id="nama">
+                </p>
+
+                <p>
+                    <label for="tgl-lahir">Tanggal Lahir :</label>
+                    <input type="date" id="tgl-lahir">
+                </p>
+
+                <p>
+                    <label for="jenis-kelamin">Jenis Kelamin :</label>
+                    <input type="radio" id="laki-laki">
+                    <label for="laki-laki">Laki-Laki</label>
+                    <input type="radio" id="perempuan">
+                    <label for="perempuan">Perempuan</label>
+                </p>
+
+                <p>
+                    <label for="pesan">Pesan</label>
+                    <textarea id="pesan" cols="30" rows="10"></textarea>
+                </p>
+
+                <p>
+                    <button type="submit">Submit</button>
+                </p>
+            </form>
+
+        </div>
+        <div>
+            <table class="table_persen">
+                <tr>
+                    <th>Nama </th>
+                    <th>tanggal lahir</th>
+                    <th>jenis kelamin</th>
+                    <th>pesan</th>
+                    <th>profile</th>
+                    <th>hapus</th>
+                </tr>
+                <tr>
+                    <td>Vincent Putro Utomo</td>
+                    <td>19-Mei-1999</td>
+                    <td>laki-laki</td>
+                    <td>Belajar buat website</td>
+                    <td><a href="#">Klik Disini</a></td>
+                    <td>Gambar</td>
+                </tr>
+                <tr>
+                    <td>Vincent Putro Utomo</td>
+                    <td>19-Mei-1999</td>
+                    <td>laki-laki</td>
+                    <td>Belajar buat website</td>
+                    <td><a href="#">Klik Disini</a></td>
+                    <td>Gambar</td>
+                </tr>
+                <tr>
+                    <td>Vincent Putro Utomo</td>
+                    <td>19-Mei-1999</td>
+                    <td>laki-laki</td>
+                    <td>Belajar buat website</td>
+                    <td><a href="#">Klik Disini</a></td>
+                    <td>Gambar</td>
+                </tr>
+            </table>
+        </div>
+    </main>
+    <footer>
+        <p>Revou 2023</p>
+    </footer>
 </body>
 </html>
