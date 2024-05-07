@@ -120,6 +120,14 @@
             </nav>
         </div>
     </header>
+    <div>
+        <img class="img-slideshow" src="banner1.jpeg" style="width: 100%;" width="" alt="">
+        <img class="img-slideshow" src="banner2.jpeg" style="width: 100%;" width="" alt="">
+        <img class="img-slideshow" src="banner1.jpeg" style="width: 100%;" width="" alt="">
+        <button onclick="plusDivs(-1)">Previous</button>
+        <button onclick="plusDivs(1)">Next</button>
+    </div>
+
     <main class="content">
         <div>
             <form action="">
@@ -215,5 +223,32 @@
     <footer>
         <p>Revou 2023</p>
     </footer>
+    <script>
+        var slideIndex = 1;
+        showDivs(slideIndex);
+
+        function plusDivs(n) {
+            showDivs(slideIndex += n);
+        }
+
+        function showDivs(n) {
+            var i;
+            var imgList = document.getElementsByClassName("img-slideshow");
+            if (n > imgList.length) slideIndex = 1;
+
+            // console.log(slideIndex);
+            if (n < 1) slideIndex = imgList.length;
+
+            for(i = 0; i < imgList.length; i++) {
+                imgList[i].style.display = "none";
+            }
+
+            imgList[slideIndex - 1].style.display = "block";
+        }
+
+        setInterval(() => {
+            plusDivs(1);
+        }, 2000);
+    </script>
 </body>
 </html>
